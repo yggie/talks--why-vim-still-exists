@@ -1,40 +1,336 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>Talks | Why VIM still exists</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/sky.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="dist/theme/moon.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <p>Why does</p>
+          <h2>VIM</h2>
+          <p>still exist in 2022?</p>
+        </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        <section>
+          <h3>VIM is 30 years old</h3>
+          <p>and still going strong...</p>
+        </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        <section>
+          <h4>Stack Overflow Survey</h4>
+          <p>
+            <small>
+              Consistently in the top 5 developer environments used by devs in
+              the past 5 years
+            </small>
+          </p>
+
+          <img
+            src="images/stack-overflow-survey-2020-dev-environment.png"
+            alt=""
+          />
+        </section>
+
+        <section>
+          <h3>Stack Overflow</h3>
+          <a
+            target="_blank"
+            rel="noreferrer nofollow"
+            href="https://stackoverflow.com/questions/11828270/how-do-i-exit-the-vim-editor"
+          >
+            <small>
+              https://stackoverflow.com/questions/11828270/how-do-i-exit-the-vim-editor
+            </small>
+          </a>
+
+          <p><small>has been viewed 2.6m times</small></p>
+        </section>
+
+        <section>
+          <h2>Features of VIM</h2>
+
+          <ul>
+            <li class="fragment">Available everywhere</li>
+            <li class="fragment">Powerful customizations</li>
+            <li class="fragment">Keyboard centric</li>
+            <li class="fragment">Flexible command system</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Then</h2>
+          <img
+            src="https://c.files.bbci.co.uk/4748/production/_102784281_mediaitem102784280.jpg"
+            alt=""
+          />
+        </section>
+
+        <section>
+          <h2>Now</h2>
+          <img
+            src="https://techcrunch.com/wp-content/uploads/2021/02/keyboard.jpg"
+            alt=""
+          />
+        </section>
+
+        <section>
+          <h2>The problem with traditional text editors</h2>
+
+          <ul>
+            <li class="fragment">Navigation optimised for typing documents</li>
+            <li class="fragment">Relies heavily on the GUI</li>
+            <li class="fragment">But it was "good enough"</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Fun facts about QWERTY</h2>
+
+          <img
+            src="https://www.daskeyboard.com/blog/wp-content/uploads/2011/06/kbqwerty.gif"
+            alt=""
+          />
+
+          <ul>
+            <li class="fragment">First appeared in 1874</li>
+            <li class="fragment">
+              QWERTY layouts were developed as a means to slow typists down
+            </li>
+            <li class="fragment">But it was "good enough"</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>DVORAK layout</h2>
+
+          <img
+            src="https://www.daskeyboard.com/blog/wp-content/uploads/2011/06/kbdvorak2.gif"
+            alt=""
+          />
+
+          <ul>
+            <li class="fragment">Introduced in 1936</li>
+            <li class="fragment">More intuitive and efficient than QWERTY</li>
+            <li class="fragment">But never really caught on</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>All of this breaks flow</h2>
+          <p class="fragment">even if just a little</p>
+        </section>
+
+        <section data-transition="convex">
+          <h2>Vi was born</h2>
+        </section>
+
+        <section>
+          <h2>Key idea #1: Modal text editing</h2>
+          <p class="fragment">Separates navigation from editing</p>
+
+          <ul>
+            <li class="fragment">Allows us to repurpose the home row</li>
+            <li class="fragment">More flexibility to work with the text</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Key idea #2: Text objects</h2>
+          <p class="fragment">Text primitives suited for code</p>
+
+          <ul>
+            <li class="fragment">Words, lines and paragraphs</li>
+            <li class="fragment">Delimiters or enclosing tags</li>
+            <li class="fragment">Pages</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Key idea #3: Melody</h2>
+          <p class="fragment">Compose commands infinitely</p>
+        </section>
+
+        <section>
+          <h3>All of this allows you to stay close to the home row</h3>
+        </section>
+
+        <section>
+          <h2>Keeps you in the flow</h2>
+        </section>
+
+        <section>
+          <h2>Other great ideas</h2>
+
+          <ul>
+            <li class="fragment">Highly configurable</li>
+            <li class="fragment">Programmable</li>
+            <li class="fragment">Close to the terminal</li>
+          </ul>
+        </section>
+
+        <section data-transition="convex">
+          <h2>How can I get started?</h2>
+
+          <p class="fragment">
+            VSCode has a plugin!
+            <br />
+            <a
+              href="https://marketplace.visualstudio.com/items?itemName=vscodevim.vim"
+            >
+              https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
+            </a>
+          </p>
+        </section>
+
+        <section>
+          <h2>How to do VIM right</h2>
+        </section>
+
+        <section>
+          <h2>Rule #1</h2>
+          <p>Stay close to the home row</p>
+
+          <ul>
+            <li class="fragment">Arrow keys are bad</li>
+            <li class="fragment">Backspace is bad</li>
+            <li class="fragment">ESC is bad</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Rule #2</h2>
+          <p>Avoid using the mouse</p>
+
+          <ul>
+            <li class="fragment">It's easier to navigate with the keyboard</li>
+            <li class="fragment">Your hands are away from the keyboard, bad</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Rule #3</h2>
+          <p>Avoid repeating keys, compose</p>
+
+          <ul>
+            <li class="fragment">Saves keystrokes</li>
+            <li class="fragment">Slower</li>
+          </ul>
+        </section>
+
+        <section data-transition="fade">
+          <h2>Thank you for listening</h2>
+        </section>
+
+        <section data-transition="fade">
+          <h2>Questions?</h2>
+        </section>
+
+        <section data-transition="fade">
+          <h2>Learning</h2>
+
+          <ul>
+            <li>
+              <a
+                href="https://www.barbarianmeetscoding.com/blog/boost-your-coding-fu-with-vscode-and-vim"
+              >
+                https://www.barbarianmeetscoding.com/blog/boost-your-coding-fu-with-vscode-and-vim
+              </a>
+            </li>
+
+            <li>
+              <a href="https://vim-adventures.com/">
+                https://vim-adventures.com
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section data-transition="zoom">
+          <h2>Resources</h2>
+
+          <ul>
+            <li>
+              <a
+                target="_blank"
+                rel="noreferrer nofollow"
+                href="https://www.daskeyboard.com/blog/typing-through-time-the-history-of-the-keyboard/"
+              >
+                https://www.daskeyboard.com/blog/typing-through-time-the-history-of-the-keyboard/
+              </a>
+            </li>
+
+            <li>
+              <a
+                target="_blank"
+                rel="noreferrer nofollow"
+                href="https://pragmaticpineapple.com/how-did-vim-become-so-popular/"
+              >
+                https://pragmaticpineapple.com/how-did-vim-become-so-popular/
+              </a>
+            </li>
+
+            <li>
+              <a
+                target="_blank"
+                rel="noreferrer nofollow"
+                href="https://www.simplethread.com/vim-at-30-heres-why-its-still-relevant/"
+              >
+                https://www.simplethread.com/vim-at-30-heres-why-its-still-relevant/
+              </a>
+            </li>
+
+            <li>
+              <a
+                target="_blank"
+                rel="noreferrer nofollow"
+                href="https://www.headspace.com/articles/flow-state"
+              >
+                https://www.headspace.com/articles/flow-state
+              </a>
+            </li>
+
+            <li>
+              <a
+                target="_blank"
+                rel="noreferrer nofollow"
+                href="https://blog.carbonfive.com/vim-text-objects-the-definitive-guide/"
+              >
+                https://blog.carbonfive.com/vim-text-objects-the-definitive-guide
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
